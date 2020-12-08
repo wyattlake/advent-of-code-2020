@@ -7,8 +7,10 @@ pub fn solution() {
     let lines: Vec<i32> = file.lines().map(|line| line.unwrap().parse::<i32>().unwrap()).collect();
     for line1 in &lines {
         for line2 in &lines {
-            if line1 + line2 == 2020 {
-                println!("{0} + {1} = 2020 and {0} * {1} = {2}", &line1, &line2, &(line1 * line2));
+            for line3 in &lines {
+                if line1 + line2 + line3 == 2020 {
+                    println!("{0} + {1} + {2} = 2020 and {0} * {1} * {2} = {3}", &line1, &line2, &line3, &(line1 * line2 * line3));
+                }
             }
         }
     }
