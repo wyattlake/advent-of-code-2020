@@ -9,7 +9,6 @@ pub fn bag_count(name: &str, parent_number: &u64, bag_map: &HashMap<String, Vec<
     else {
         for bag_name in bag_map.get_key_value(name).unwrap().1 {
             let x = bag_name.chars().nth(0).unwrap().to_digit(10).unwrap() as u64;
-            println!("number: {}, parent_number: {}, adding: {}", x, parent_number, x * parent_number);
             *counter = *counter + (x * parent_number);
             bag_count(&bag_name[2..], &(x * parent_number), bag_map, counter);
         }
@@ -45,7 +44,6 @@ pub fn solution() {
         }
         bag_map.insert(name, list);
     }
-    println!("{:?}", &bag_map);
     let mut count: u64 = 0;
     bag_count("shiny gold", &1, &bag_map, &mut count);
     println!("Count is {}", count);
