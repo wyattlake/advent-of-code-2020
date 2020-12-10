@@ -22,7 +22,6 @@ pub fn solution() {
             while sum <= num {
                 sum += lines[ending_index];
                 nums.push(lines[ending_index]);
-                //println!("starting: {}, ending: {}", starting_index, ending_index);
                 if sum == num {
                     answer = nums.iter().max().unwrap() + nums.iter().min().unwrap();
                     break 'inner_loop;
