@@ -1,4 +1,4 @@
-use programs::day_10::*;
+use programs::day_11::*;
 
 fn main() {
     puzzle_1::solution();
