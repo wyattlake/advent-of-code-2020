@@ -1,5 +1,5 @@
-use programs::day_12::*;
+use programs::day_13::*;
 
 fn main() {
-    puzzle_2::solution();
+    puzzle_1::solution();
 }
