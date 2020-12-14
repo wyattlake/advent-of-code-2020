@@ -27,7 +27,7 @@ pub fn solution() {
     let mut count = 1;
     let mut removable_numbers = 0;
     let mut removed = vec![];
-    let mut adaptors_clone = adaptors.clone();
+    let adaptors_clone = adaptors.clone();
 
     for x in -((adaptors.len() - 1) as i64)..-2 {
         let index = -x as usize;
