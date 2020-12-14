@@ -41,7 +41,6 @@ pub fn solution() {
     for line in 0..lines.len() {
         let instruction = lines[line].chars().nth(0).unwrap();
         let number = lines[line][1..].parse::<i32>().unwrap();
-        println!("number: {}", number);
         match instruction {
             'F' => {
                 forward(number, &direction, &mut east, &mut north);
@@ -68,7 +67,6 @@ pub fn solution() {
                 panic!("Invalid instruction: {}", instruction);
             }
         }
-        println!("east: {}, north: {}", east, north);
     }
     println!("Manhattan Distance: {}", east.abs() + north.abs());
 }
